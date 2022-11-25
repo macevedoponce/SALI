@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Perfil extends AppCompatActivity {
-    CardView cardVerAsistencia, cardVerNotas;
+    CardView cardVerAsistencia, cardVerNotas,cardVerNotificaciones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +16,7 @@ public class Perfil extends AppCompatActivity {
         setContentView(R.layout.activity_perfil);
         cardVerAsistencia = findViewById(R.id.cardVerAsistencia);
         cardVerNotas = findViewById(R.id.cardVerNotas);
+        cardVerNotificaciones = findViewById(R.id.cardVerNotificaciones);
 
         cardVerAsistencia.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +30,14 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Perfil.this,verNotaAlumno.class);
+                startActivity(i);
+            }
+        });
+
+        cardVerNotificaciones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Perfil.this,verNotificaciones.class);
                 startActivity(i);
             }
         });

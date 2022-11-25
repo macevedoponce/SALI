@@ -20,7 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sali"
         android:usesCleartextTraffic="true">
-        <activity android:name=".verNotaAlumno"></activity>
+        <activity android:name=".verNotificaciones"></activity>
+        <activity android:name=".verNotaAlumno" />
         <activity android:name=".verAsistenciaAlumno" />
         <activity
             android:name=".Splash"
